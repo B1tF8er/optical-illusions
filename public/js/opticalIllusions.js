@@ -1,8 +1,8 @@
-import zollner from './zollner.js';
-import cafeWall from './cafeWall.js';
-import blinkingDots from './blinkingDots.js';
-import kanizsaTriangle from './kanizsaTriangle.js';
-import mullerLyer from './mullerLyer.js';
+import zollner from "./zollner.js";
+import cafeWall from "./cafeWall.js";
+import blinkingDots from "./blinkingDots.js";
+import kanizsaTriangle from "./kanizsaTriangle.js";
+import mullerLyer from "./mullerLyer.js";
 
 class opticalIllusions {
   static display() {
