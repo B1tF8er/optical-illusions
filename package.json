@@ -1,0 +1,23 @@
+{
+  "name": "optical-illusions",
+  "version": "1.0.0",
+  "description": "Optical illusions using HTML5 canvas and JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B1tF8er/optical-illusions.git"
+  },
+  "keywords": ["optical", "illusion", "canvas"],
+  "author": "Jorge Yañez",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/B1tF8er/optical-illusions/issues"
+  },
+  "homepage": "https://github.com/B1tF8er/optical-illusions#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
