@@ -1,38 +1,47 @@
+import canvas from "./canvas.js";
+
 function blinkingDots() {
-  let canvas = document.getElementById("blinking-dots");
-  let context = canvas.getContext("2d");
+  const bdCanvas = new canvas("blinking-dots");
 
-  const boxSize = 20;
+  addBoxes(bdCanvas);
+  addCircles(bdCanvas);
+}
 
-  context.beginPath();
-
-  for (let x = 0; x <= canvas.width; x += 25) {
-    for (let y = 0; y <= canvas.height; y += 25) {
-      context.fillRect(x, y, boxSize, boxSize);
+function addBoxes(bdCanvas) {
+  for (let x = 0; x <= bdCanvas.width; x += 25) {
+    for (let y = 0; y <= bdCanvas.height; y += 25) {
+      bdCanvas.addRectangle({
+        position: {
+          x: x,
+          y: y
+        },
+        width: 20,
+        height: 20
+      });
     }
   }
+}
 
-  context.stroke();
-  context.closePath();
-
-  const radius = 5;
-  const endAngle = 2 * Math.PI;
-
-  const colors = {
-    white: "#fff",
-    black: "#000"
-  };
-
-  for (let centerX = 22; centerX <= canvas.width; centerX += 25) {
-    for (let centerY = 22; centerY <= canvas.height; centerY += 25) {
-      context.beginPath();
-      context.arc(centerX, centerY, radius, 0, endAngle, false);
-      context.fillStyle = colors.white;
-      context.fill();
-      context.lineWidth = 1;
-      context.strokeStyle = colors.black;
-      context.stroke();
-      context.closePath();
+function addCircles(bdCanvas) {
+  for (let centerX = 22; centerX <= bdCanvas.width; centerX += 25) {
+    for (let centerY = 22; centerY <= bdCanvas.height; centerY += 25) {
+      bdCanvas.addCircle(
+        {
+          position: {
+            centerX: centerX,
+            centerY: centerY
+          },
+          radius: 5,
+          startAngle: 0,
+          endAngle: 2,
+          counterClockwise: false
+        },
+        {
+          fillStyle: "#fff",
+          strokeStyle: "#000",
+          lineWidth: 1
+        }
+      );
     }
   }
 }
