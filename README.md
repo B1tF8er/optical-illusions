@@ -13,3 +13,10 @@ This message must appear on the terminal:
 Go to that URL
 
 Enjoy...
+
+## Optical Illusions created
+1. Zollner
+2. Cafe Wall
+3. Blinking Dots
+4. Kanizsa Triangle
+5. Muller-Lyer
