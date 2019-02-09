@@ -2,7 +2,7 @@
 Optical illusions using HTML5 canvas and JavaScript modules
 
 # How to run 
-- Install (NodeJs)[https://nodejs.org/en/] 
+- Install [NodeJs](https://nodejs.org/en/) 
 - Open a terminal
 - Move to the _optical-illusions_ directory ej: `cd example/optical-illusions`
 - Run `node server.js`
