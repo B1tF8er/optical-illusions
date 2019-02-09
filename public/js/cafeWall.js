@@ -1,5 +1,5 @@
 function cafeWall() {
-  let canvas = document.getElementById("cafeWall");
+  let canvas = document.getElementById("cafe-wall");
   let context = canvas.getContext("2d");
   let iterationControl = 1;
 

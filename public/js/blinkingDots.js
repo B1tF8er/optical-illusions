@@ -1,5 +1,5 @@
 function blinkingDots() {
-  let canvas = document.getElementById("blinkingDots");
+  let canvas = document.getElementById("blinking-dots");
   let context = canvas.getContext("2d");
 
   const boxSize = 20;

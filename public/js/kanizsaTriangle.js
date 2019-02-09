@@ -1,5 +1,5 @@
 function kanizsaTriangle() {
-  let canvasElement = document.getElementById("kanizsaTriangle");
+  let canvasElement = document.getElementById("kanizsa-triangle");
   let context = canvasElement.getContext("2d");
 
   firstCircle(context);

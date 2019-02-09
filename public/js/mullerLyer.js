@@ -1,5 +1,5 @@
 function mullerLyer() {
-  let canvasElement = document.getElementById("mullerLyer");
+  let canvasElement = document.getElementById("muller-lyer");
   let context = canvasElement.getContext("2d");
 
   leftRectangle(context);
