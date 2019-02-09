@@ -1,72 +1,98 @@
+import canvas from "./canvas.js";
+
 function kanizsaTriangle() {
-  let canvasElement = document.getElementById("kanizsa-triangle");
-  let context = canvasElement.getContext("2d");
+  const ktCanvas = new canvas("kanizsa-triangle");
 
-  firstCircle(context);
-  secondCircle(context);
-  thirdCircle(context);
-  firstTriangle(context);
-  secondTriangle(context);
+  addCircles(ktCanvas);
+  addTriangles(ktCanvas);
 }
 
-function firstCircle(context) {
-  context.beginPath();
-  context.arc(80, 60, 30, 0, 2 * Math.PI);
-  context.stroke();
-  context.closePath();
+function addCircles(ktCanvas) {
+  const circles = [
+    {
+      x: 80,
+      y: 60
+    },
+    {
+      x: 220,
+      y: 60
+    },
+    {
+      x: 150,
+      y: 190
+    }
+  ];
 
-  context.fillStyle = "#000";
-  context.fill();
+  circles.forEach(circle => {
+    ktCanvas.addCircle(
+      {
+        position: {
+          centerX: circle.x,
+          centerY: circle.y
+        },
+        radius: 30,
+        startAngle: 0,
+        endAngle: 2,
+        counterClockwise: false
+      },
+      {
+        fillStyle: "#000",
+        strokeStyle: "#000",
+        lineWidth: 1
+      }
+    );
+  });
 }
 
-function secondCircle(context) {
-  context.beginPath();
-  context.arc(220, 60, 30, 0, 2 * Math.PI);
-  context.stroke();
-  context.closePath();
+function addTriangles(ktCanvas) {
+  const triangles = [
+    {
+      positions: {
+        startPosition: {
+          x: 150,
+          y: 20
+        },
+        leftPosition: {
+          x: 75,
+          y: 150
+        },
+        rightPosition: {
+          x: 225,
+          y: 150
+        }
+      },
+      style: {
+        fillStyle: "#FFF",
+        strokeStyle: "#000",
+        lineWidth: 5
+      }
+    },
+    {
+      positions: {
+        startPosition: {
+          x: 150,
+          y: 180
+        },
+        leftPosition: {
+          x: 75,
+          y: 60
+        },
+        rightPosition: {
+          x: 225,
+          y: 60
+        }
+      },
+      style: {
+        fillStyle: "#FFF",
+        strokeStyle: "#FFF",
+        lineWidth: 5
+      }
+    }
+  ];
 
-  context.fillStyle = "#000";
-  context.fill();
-}
-
-function thirdCircle(context) {
-  context.beginPath();
-  context.arc(150, 190, 30, 0, 2 * Math.PI);
-  context.stroke();
-  context.closePath();
-
-  context.fillStyle = "#000";
-  context.fill();
-}
-
-function firstTriangle(context) {
-  context.beginPath();
-  context.moveTo(150, 20);
-  context.lineTo(75, 150);
-  context.lineTo(225, 150);
-  context.closePath();
-  // the outline
-  context.lineWidth = 5;
-  context.strokeStyle = "#000";
-  context.stroke();
-  // the fill color
-  context.fillStyle = "#FFF";
-  context.fill();
-}
-
-function secondTriangle(context) {
-  context.beginPath();
-  context.moveTo(150, 180);
-  context.lineTo(75, 60);
-  context.lineTo(225, 60);
-  context.closePath();
-  // the outline
-  context.lineWidth = 5;
-  context.strokeStyle = "#FFF";
-  context.stroke();
-  // the fill color
-  context.fillStyle = "#FFF";
-  context.fill();
+  triangles.forEach(triangle => {
+    ktCanvas.addTriangle(triangle.positions, triangle.style);
+  });
 }
 
 export default kanizsaTriangle;
