@@ -2,6 +2,7 @@ import canvas from "./canvas.js";
 import point from "./point.js";
 import size from "./size.js";
 import line from "./line.js";
+import rectangle from "./rectangle.js";
 
 function mullerLyer() {
   const mlCanvas = new canvas("muller-lyer");
@@ -11,10 +12,7 @@ function mullerLyer() {
 }
 
 function leftRectangle(mlCanvas) {
-  mlCanvas.addRectangle({
-    position: new point(50, 40),
-    size: new size(80, 150)
-  });
+  mlCanvas.addRectangle(new rectangle(new point(50, 40), new size(80, 150)));
 
   mlCanvas.addLine(new line(new point(50, 60), new point(90, 50)));
 
@@ -28,10 +26,7 @@ function leftRectangle(mlCanvas) {
 }
 
 function rightRectangle(mlCanvas) {
-  mlCanvas.addRectangle({
-    position: new point(150, 40),
-    size: new size(80, 150)
-  });
+  mlCanvas.addRectangle(new rectangle(new point(150, 40), new size(80, 150)));
 
   mlCanvas.addLine(new line(new point(150, 40), new point(190, 50)));
 

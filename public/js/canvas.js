@@ -14,19 +14,19 @@ export default class canvas {
     }
   }
 
-  addFillRectangle(dimensions) {
+  addFillRectangle(rectangle) {
     this.context.beginPath();
     this.context.fillRect(
-      dimensions.position.x,
-      dimensions.position.y,
-      dimensions.size.width,
-      dimensions.size.height
+      rectangle.point.x,
+      rectangle.point.y,
+      rectangle.size.width,
+      rectangle.size.height
     );
     this.context.stroke();
     this.context.closePath();
   }
 
-  addCircle(circle, style) {
+  addCircle(circle) {
     this.context.beginPath();
     this.context.arc(
       circle.point.x,
@@ -38,40 +38,23 @@ export default class canvas {
     );
     this.context.stroke();
     this.context.closePath();
-
-    // the fill color
-    this.context.fillStyle = style.fillStyle;
-    this.context.fill();
-
-    // the outline
-    this.context.lineWidth = style.lineWidth;
-    this.context.strokeStyle = style.strokeStyle;
   }
 
-  addTriangle(triangle, style) {
+  addTriangle(triangle) {
     this.context.beginPath();
     this.context.moveTo(triangle.startPoint.x, triangle.startPoint.y);
     this.context.lineTo(triangle.leftPoint.x, triangle.leftPoint.y);
     this.context.lineTo(triangle.rightPoint.x, triangle.rightPoint.y);
     this.context.closePath();
-
-    // the fill color
-    this.context.fillStyle = style.fillStyle;
-    this.context.fill();
-
-    // the outline
-    this.context.lineWidth = style.lineWidth;
-    this.context.strokeStyle = style.strokeStyle;
-    this.context.stroke();
   }
 
-  addRectangle(dimensions) {
+  addRectangle(rectangle) {
     this.context.beginPath();
     this.context.rect(
-      dimensions.position.x,
-      dimensions.position.y,
-      dimensions.size.width,
-      dimensions.size.height
+      rectangle.point.x,
+      rectangle.point.y,
+      rectangle.size.width,
+      rectangle.size.height
     );
     this.context.stroke();
     this.context.closePath();
@@ -83,5 +66,14 @@ export default class canvas {
     this.context.lineTo(line.to.x, line.to.y);
     this.context.stroke();
     this.context.closePath();
+  }
+
+  addStyle(style) {
+    this.context.fillStyle = style.fillColor;
+    this.context.fill();
+
+    this.context.lineWidth = style.lineWidth;
+    this.context.strokeStyle = style.strokeColor;
+    this.context.stroke();
   }
 }

@@ -2,6 +2,8 @@ import canvas from "./canvas.js";
 import point from "./point.js";
 import size from "./size.js";
 import circle from "./circle.js";
+import rectangle from "./rectangle.js";
+import style from "./style.js";
 
 function blinkingDots() {
   const bdCanvas = new canvas("blinking-dots");
@@ -11,12 +13,13 @@ function blinkingDots() {
 }
 
 function addBoxes(bdCanvas) {
+  const boxSize = 20;
+
   for (let x = 0; x <= bdCanvas.width; x += 25) {
     for (let y = 0; y <= bdCanvas.height; y += 25) {
-      bdCanvas.addFillRectangle({
-        position: new point(x, y),
-        size: new size(20, 20)
-      });
+      bdCanvas.addFillRectangle(
+        new rectangle(new point(x, y), new size(boxSize, boxSize))
+      );
     }
   }
 }
@@ -24,11 +27,8 @@ function addBoxes(bdCanvas) {
 function addCircles(bdCanvas) {
   for (let x = 22; x <= bdCanvas.width; x += 25) {
     for (let y = 22; y <= bdCanvas.height; y += 25) {
-      bdCanvas.addCircle(new circle(new point(x, y), 5, 0, 2, false), {
-        fillStyle: "#fff",
-        strokeStyle: "#000",
-        lineWidth: 1
-      });
+      bdCanvas.addCircle(new circle(new point(x, y), 5, 0, 2, false));
+      bdCanvas.addStyle(new style("#fff", "#000", 1));
     }
   }
 }
