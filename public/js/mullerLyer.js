@@ -1,93 +1,142 @@
+import canvas from "./canvas.js";
+
 function mullerLyer() {
-  let canvasElement = document.getElementById("muller-lyer");
-  let context = canvasElement.getContext("2d");
+  const mlCanvas = new canvas("muller-lyer");
 
-  leftRectangle(context);
-  rightRectangle(context);
+  leftRectangle(mlCanvas);
+  rightRectangle(mlCanvas);
 }
 
-function leftRectangle(context) {
-  context.beginPath();
-  context.rect(50, 40, 80, 150);
-  context.stroke();
-  context.closePath();
+function leftRectangle(mlCanvas) {
+  mlCanvas.addRectangle({
+    position: {
+      x: 50,
+      y: 40
+    },
+    width: 80,
+    height: 150
+  });
 
-  // top left line
-  context.beginPath();
-  context.moveTo(50, 60);
-  context.lineTo(90, 50);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 50,
+      y: 60
+    },
+    {
+      x: 90,
+      y: 50
+    }
+  );
 
-  // top right line
-  context.beginPath();
-  context.moveTo(90, 50);
-  context.lineTo(130, 60);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 90,
+      y: 50
+    },
+    {
+      x: 130,
+      y: 60
+    }
+  );
 
-  // center line
-  context.beginPath();
-  context.moveTo(90, 50);
-  context.lineTo(90, 180);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 90,
+      y: 50
+    },
+    {
+      x: 90,
+      y: 180
+    }
+  );
 
-  // bottom left line
-  context.beginPath();
-  context.moveTo(50, 170);
-  context.lineTo(90, 180);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 50,
+      y: 170
+    },
+    {
+      x: 90,
+      y: 180
+    }
+  );
 
-  // bottom right line
-  context.beginPath();
-  context.moveTo(90, 180);
-  context.lineTo(130, 170);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 90,
+      y: 180
+    },
+    {
+      x: 130,
+      y: 170
+    }
+  );
 }
 
-function rightRectangle(context) {
-  context.beginPath();
-  context.rect(150, 40, 80, 150);
-  context.stroke();
-  context.closePath();
+function rightRectangle(mlCanvas) {
+  mlCanvas.addRectangle({
+    position: {
+      x: 150,
+      y: 40
+    },
+    width: 80,
+    height: 150
+  });
 
-  // top left line
-  context.beginPath();
-  context.moveTo(150, 40);
-  context.lineTo(190, 50);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 150,
+      y: 40
+    },
+    {
+      x: 190,
+      y: 50
+    }
+  );
 
-  // top right line
-  context.beginPath();
-  context.moveTo(190, 50);
-  context.lineTo(230, 40);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 190,
+      y: 50
+    },
+    {
+      x: 230,
+      y: 40
+    }
+  );
 
-  // center line
-  context.beginPath();
-  context.moveTo(190, 50);
-  context.lineTo(190, 180);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 190,
+      y: 50
+    },
+    {
+      x: 190,
+      y: 180
+    }
+  );
 
-  // bottom left line
-  context.beginPath();
-  context.moveTo(150, 190);
-  context.lineTo(190, 180);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 150,
+      y: 190
+    },
+    {
+      x: 190,
+      y: 180
+    }
+  );
 
-  // bottom right line
-  context.beginPath();
-  context.moveTo(190, 180);
-  context.lineTo(230, 190);
-  context.stroke();
-  context.closePath();
+  mlCanvas.addLine(
+    {
+      x: 190,
+      y: 180
+    },
+    {
+      x: 230,
+      y: 190
+    }
+  );
 }
 
 export default mullerLyer;
