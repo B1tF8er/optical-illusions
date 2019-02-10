@@ -1,44 +1,42 @@
+import canvas from "./canvas.js";
+import point from "./point.js";
+import line from "./line.js";
+import rectangle from "./rectangle.js";
+import size from "./size.js";
+
 function cafeWall() {
-  let canvas = document.getElementById("cafe-wall");
-  let context = canvas.getContext("2d");
-  let iterationControl = 1;
+  const cafeWallCanvas = new canvas("cafe-wall");
 
-  const rectWidth = 20;
-  const rectHeight = 20;
-  const x = 0;
-  const lineHeight = 300;
+  addLines(cafeWallCanvas);
+  addRectangles(cafeWallCanvas);
+}
 
-  context.beginPath();
-
-  for (let j = 0; j < canvas.width; j += 40) {
-    for (let k = 0; k < canvas.height; k += 20) {
-      let y = 20 + k;
-      let lineWidth = 20 + k;
-      let rectX = 5 + j;
-      let rectY = 0 + k;
-      let isModuloOfThree = iterationControl % 3 === 0;
-      let isModuloOfTwo = iterationControl % 2 === 0;
-
-      context.moveTo(x, y);
-      context.lineTo(lineHeight, lineWidth);
-
-      if (isModuloOfThree) {
-        rectX += 10;
-        iterationControl = 1;
-      } else if (isModuloOfTwo) {
-        rectX += 5;
-      }
-
-      context.fillRect(rectX, rectY, rectWidth, rectHeight);
-
-      iterationControl++;
+function addLines(cafeWallCanvas) {
+  for (let x = 0; x < cafeWallCanvas.width; x += 40) {
+    for (let y = 0; y < cafeWallCanvas.height; y += 20) {
+      cafeWallCanvas.addLine(
+        new line(new point(0, 20 + y), new point(300, 20 + y))
+      );
     }
-
-    iterationControl = 1;
   }
+}
 
-  context.stroke();
-  context.closePath();
+function addRectangles(cafeWallCanvas) {
+  const boxSize = 20;
+
+  for (let x = 0; x < cafeWallCanvas.width; x += 40) {
+    for (let index = 1, y = 0; y < cafeWallCanvas.height; index++, y += 20) {
+      if (index % 2 === 0) {
+        cafeWallCanvas.addFillRectangle(
+          new rectangle(new point(10 + x, y), new size(boxSize, boxSize))
+        );
+      } else {
+        cafeWallCanvas.addFillRectangle(
+          new rectangle(new point(15 + x, y), new size(boxSize, boxSize))
+        );
+      }
+    }
+  }
 }
 
 export default cafeWall;
