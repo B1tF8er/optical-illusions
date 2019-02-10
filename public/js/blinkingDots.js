@@ -4,7 +4,7 @@ import size from "./size.js";
 import circle from "./circle.js";
 import rectangle from "./rectangle.js";
 import style from "./style.js";
-import constants from "./constants.js"
+import constants from "./constants.js";
 
 function blinkingDots() {
   const blinkingDotsCanvas = new canvas("blinking-dots");
@@ -26,10 +26,24 @@ function addBoxes(blinkingDotsCanvas) {
 }
 
 function addCircles(blinkingDotsCanvas) {
+  const radius = 5;
+  const startAngle = 0;
+  const endAngle = 2;
+
   for (let x = 22; x <= blinkingDotsCanvas.width; x += 25) {
     for (let y = 22; y <= blinkingDotsCanvas.height; y += 25) {
-      blinkingDotsCanvas.addCircle(new circle(new point(x, y), 5, 0, 2, constants.Clockwise));
-      blinkingDotsCanvas.addStyle(new style(constants.White, constants.Black, 1));
+      blinkingDotsCanvas.addCircle(
+        new circle(
+          new point(x, y),
+          radius,
+          startAngle,
+          endAngle,
+          constants.Clockwise
+        )
+      );
+      blinkingDotsCanvas.addStyle(
+        new style(constants.White, constants.Black, 1)
+      );
     }
   }
 }

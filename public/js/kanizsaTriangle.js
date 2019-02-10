@@ -3,7 +3,7 @@ import point from "./point.js";
 import circle from "./circle.js";
 import triangle from "./triangle.js";
 import style from "./style.js";
-import constants from "./constants.js"
+import constants from "./constants.js";
 
 function kanizsaTriangle() {
   const kanizsaTriangleCanvas = new canvas("kanizsa-triangle");
@@ -19,17 +19,39 @@ function kanizsaTriangle() {
 }
 
 function circles() {
+  const radius = 30;
+  const startAngle = 0;
+  const endAngle = 2;
+
   return [
     {
-      instance: new circle(new point(80, 60), 30, 0, 2, constants.Clockwise),
+      instance: new circle(
+        new point(80, 60),
+        radius,
+        startAngle,
+        endAngle,
+        constants.Clockwise
+      ),
       style: new style(constants.Black, constants.Black, 1)
     },
     {
-      instance: new circle(new point(220, 60), 30, 0, 2, constants.Clockwise),
+      instance: new circle(
+        new point(220, 60),
+        radius,
+        startAngle,
+        endAngle,
+        constants.Clockwise
+      ),
       style: new style(constants.Black, constants.Black, 1)
     },
     {
-      instance: new circle(new point(150, 190), 30, 0, 2, constants.Clockwise),
+      instance: new circle(
+        new point(150, 190),
+        radius,
+        startAngle,
+        endAngle,
+        constants.Clockwise
+      ),
       style: new style(constants.Black, constants.Black, 1)
     }
   ];
