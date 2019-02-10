@@ -19,8 +19,8 @@ export default class canvas {
     this.context.fillRect(
       dimensions.position.x,
       dimensions.position.y,
-      dimensions.width,
-      dimensions.height
+      dimensions.size.width,
+      dimensions.size.height
     );
     this.context.stroke();
     this.context.closePath();
@@ -70,8 +70,8 @@ export default class canvas {
     this.context.rect(
       dimensions.position.x,
       dimensions.position.y,
-      dimensions.width,
-      dimensions.height
+      dimensions.size.width,
+      dimensions.size.height
     );
     this.context.stroke();
     this.context.closePath();
