@@ -10,18 +10,9 @@ function kanizsaTriangle() {
 
 function addCircles(ktCanvas) {
   const circles = [
-    {
-      x: 80,
-      y: 60
-    },
-    {
-      x: 220,
-      y: 60
-    },
-    {
-      x: 150,
-      y: 190
-    }
+    new point(80, 60),
+    new point(220, 60),
+    new point(150, 190)
   ];
 
   circles.forEach(circle => {
