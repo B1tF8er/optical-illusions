@@ -1,4 +1,5 @@
 import canvas from "./canvas.js";
+import point from "./point.js";
 import size from "./size.js";
 
 function blinkingDots() {
@@ -12,10 +13,7 @@ function addBoxes(bdCanvas) {
   for (let x = 0; x <= bdCanvas.width; x += 25) {
     for (let y = 0; y <= bdCanvas.height; y += 25) {
       bdCanvas.addFillRectangle({
-        position: {
-          x: x,
-          y: y
-        },
+        position: new point(x, y),
         size: new size(20, 20)
       });
     }
