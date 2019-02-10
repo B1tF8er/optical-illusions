@@ -5,14 +5,12 @@ import triangle from "./triangle.js";
 
 function kanizsaTriangle() {
   const ktCanvas = new canvas("kanizsa-triangle");
-  const circles = createCircles();
-  const triangles = createTriangles();
 
-  circles.forEach(c => ktCanvas.addCircle(c.instance, c.style));
-  triangles.forEach(t => ktCanvas.addTriangle(t.instance, t.style));
+  circles().forEach(c => ktCanvas.addCircle(c.instance, c.style));
+  triangles().forEach(t => ktCanvas.addTriangle(t.instance, t.style));
 }
 
-function createCircles() {
+function circles() {
   return [
     {
       instance: new circle(new point(80, 60), 30, 0, 2, false),
@@ -41,7 +39,7 @@ function createCircles() {
   ];
 }
 
-function createTriangles() {
+function triangles() {
   return [
     {
       instance: new triangle(
