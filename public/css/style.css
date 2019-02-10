@@ -7,6 +7,10 @@ canvas {
   border: 1px solid #000;
 }
 
+#zollner {
+  background-color: #e09e1b;
+}
+
 #blinking-dots {
   background-color: #bbb3b3;
 }
