@@ -1,38 +1,54 @@
+import canvas from "./canvas.js";
+import point from "./point.js";
+import line from "./line.js";
+import style from "./style.js";
+import constants from "./constants.js";
+
 function zollner() {
-  let canvas = document.getElementById("zollner");
-  let context = canvas.getContext("2d");
+  const zCanvas = new canvas("zollner");
+
+  addDiagonalLines(zCanvas);
+}
+
+function addDiagonalLines(zCanvas) {
+  const fromX = 0;
+  const fromY = 50;
+  const toX = 600;
+  const toY = 350;
+
   let iterationControl = 1;
 
-  context.beginPath();
-  context.lineWidth = 3;
-
-  const initialX = 0;
-  const initialY = 50;
-  const height = 600;
-  const width = 350;
-
-  for (let i = -300; i < canvas.height; i += 50) {
-    context.moveTo(initialX, initialY + i);
-    context.lineTo(height, width + i);
+  for (let y = -300; y < zCanvas.height; y += 50) {
+    zCanvas.addLine(
+      new line(new point(fromX, fromY + y), new point(toX, toY + y))
+    );
+    zCanvas.addStyle(new style(constants.Black, constants.Black, 3));
 
     let isModuloOfTwo = iterationControl % 2 === 0;
-    let iterations = isModuloOfTwo ? 0 : -150;
+    let x = isModuloOfTwo ? 0 : -150;
 
-    for (let j = i, k = iterations; j < canvas.width; j += 10, k += 20) {
-      let x = isModuloOfTwo ? 10 + k : 40 + k;
-      let y = isModuloOfTwo ? 40 + j : 10 + j;
-      let lineHeight = isModuloOfTwo ? 10 + k : 100 + k;
-      let lineWidth = isModuloOfTwo ? 70 + j : 10 + j;
-
-      context.moveTo(x, y);
-      context.lineTo(lineHeight, lineWidth);
-    }
+    isModuloOfTwo
+      ? addVerticalLines(x, y, zCanvas)
+      : addHorizontalLines(x, y, zCanvas);
 
     iterationControl++;
   }
+}
 
-  context.stroke();
-  context.closePath();
+function addVerticalLines(x, y, zCanvas) {
+  for (; y < zCanvas.width; y += 10, x += 20) {
+    zCanvas.addLine(
+      new line(new point(10 + x, 40 + y), new point(10 + x, 70 + y))
+    );
+  }
+}
+
+function addHorizontalLines(x, y, zCanvas) {
+  for (; y < zCanvas.width; y += 10, x += 20) {
+    zCanvas.addLine(
+      new line(new point(40 + x, 10 + y), new point(100 + x, 10 + y))
+    );
+  }
 }
 
 export default zollner;
