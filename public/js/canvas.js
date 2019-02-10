@@ -29,8 +29,8 @@ export default class canvas {
   addCircle(dimensions, style) {
     this.context.beginPath();
     this.context.arc(
-      dimensions.position.centerX,
-      dimensions.position.centerY,
+      dimensions.position.x,
+      dimensions.position.y,
       dimensions.radius,
       dimensions.startAngle * Math.PI,
       dimensions.endAngle * Math.PI,
