@@ -21,15 +21,15 @@ function kanizsaTriangle() {
 function circles() {
   return [
     {
-      instance: new circle(new point(80, 60), 30, 0, 2, false),
+      instance: new circle(new point(80, 60), 30, 0, 2, constants.Clockwise),
       style: new style(constants.Black, constants.Black, 1)
     },
     {
-      instance: new circle(new point(220, 60), 30, 0, 2, false),
+      instance: new circle(new point(220, 60), 30, 0, 2, constants.Clockwise),
       style: new style(constants.Black, constants.Black, 1)
     },
     {
-      instance: new circle(new point(150, 190), 30, 0, 2, false),
+      instance: new circle(new point(150, 190), 30, 0, 2, constants.Clockwise),
       style: new style(constants.Black, constants.Black, 1)
     }
   ];
