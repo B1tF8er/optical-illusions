@@ -1,4 +1,5 @@
 import canvas from "./canvas.js";
+import point from "./point.js";
 
 function mullerLyer() {
   const mlCanvas = new canvas("muller-lyer");
@@ -9,134 +10,38 @@ function mullerLyer() {
 
 function leftRectangle(mlCanvas) {
   mlCanvas.addRectangle({
-    position: {
-      x: 50,
-      y: 40
-    },
+    position: new point(50, 40),
     width: 80,
     height: 150
   });
 
-  mlCanvas.addLine(
-    {
-      x: 50,
-      y: 60
-    },
-    {
-      x: 90,
-      y: 50
-    }
-  );
+  mlCanvas.addLine(new point(50, 60), new point(90, 50));
 
-  mlCanvas.addLine(
-    {
-      x: 90,
-      y: 50
-    },
-    {
-      x: 130,
-      y: 60
-    }
-  );
+  mlCanvas.addLine(new point(90, 50), new point(130, 60));
 
-  mlCanvas.addLine(
-    {
-      x: 90,
-      y: 50
-    },
-    {
-      x: 90,
-      y: 180
-    }
-  );
+  mlCanvas.addLine(new point(90, 50), new point(90, 180));
 
-  mlCanvas.addLine(
-    {
-      x: 50,
-      y: 170
-    },
-    {
-      x: 90,
-      y: 180
-    }
-  );
+  mlCanvas.addLine(new point(50, 170), new point(90, 180));
 
-  mlCanvas.addLine(
-    {
-      x: 90,
-      y: 180
-    },
-    {
-      x: 130,
-      y: 170
-    }
-  );
+  mlCanvas.addLine(new point(90, 180), new point(130, 170));
 }
 
 function rightRectangle(mlCanvas) {
   mlCanvas.addRectangle({
-    position: {
-      x: 150,
-      y: 40
-    },
+    position: new point(150, 40),
     width: 80,
     height: 150
   });
 
-  mlCanvas.addLine(
-    {
-      x: 150,
-      y: 40
-    },
-    {
-      x: 190,
-      y: 50
-    }
-  );
+  mlCanvas.addLine(new point(150, 40), new point(190, 50));
 
-  mlCanvas.addLine(
-    {
-      x: 190,
-      y: 50
-    },
-    {
-      x: 230,
-      y: 40
-    }
-  );
+  mlCanvas.addLine(new point(190, 50), new point(230, 40));
 
-  mlCanvas.addLine(
-    {
-      x: 190,
-      y: 50
-    },
-    {
-      x: 190,
-      y: 180
-    }
-  );
+  mlCanvas.addLine(new point(190, 50), new point(190, 180));
 
-  mlCanvas.addLine(
-    {
-      x: 150,
-      y: 190
-    },
-    {
-      x: 190,
-      y: 180
-    }
-  );
+  mlCanvas.addLine(new point(150, 190), new point(190, 180));
 
-  mlCanvas.addLine(
-    {
-      x: 190,
-      y: 180
-    },
-    {
-      x: 230,
-      y: 190
-    }
-  );
+  mlCanvas.addLine(new point(190, 180), new point(230, 190));
 }
 
 export default mullerLyer;
