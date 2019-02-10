@@ -7,29 +7,29 @@ import style from "./style.js";
 import constants from "./constants.js"
 
 function blinkingDots() {
-  const bdCanvas = new canvas("blinking-dots");
+  const blinkingDotsCanvas = new canvas("blinking-dots");
 
-  addBoxes(bdCanvas);
-  addCircles(bdCanvas);
+  addBoxes(blinkingDotsCanvas);
+  addCircles(blinkingDotsCanvas);
 }
 
-function addBoxes(bdCanvas) {
+function addBoxes(blinkingDotsCanvas) {
   const boxSize = 20;
 
-  for (let x = 0; x <= bdCanvas.width; x += 25) {
-    for (let y = 0; y <= bdCanvas.height; y += 25) {
-      bdCanvas.addFillRectangle(
+  for (let x = 0; x <= blinkingDotsCanvas.width; x += 25) {
+    for (let y = 0; y <= blinkingDotsCanvas.height; y += 25) {
+      blinkingDotsCanvas.addFillRectangle(
         new rectangle(new point(x, y), new size(boxSize, boxSize))
       );
     }
   }
 }
 
-function addCircles(bdCanvas) {
-  for (let x = 22; x <= bdCanvas.width; x += 25) {
-    for (let y = 22; y <= bdCanvas.height; y += 25) {
-      bdCanvas.addCircle(new circle(new point(x, y), 5, 0, 2, constants.Clockwise));
-      bdCanvas.addStyle(new style(constants.White, constants.Black, 1));
+function addCircles(blinkingDotsCanvas) {
+  for (let x = 22; x <= blinkingDotsCanvas.width; x += 25) {
+    for (let y = 22; y <= blinkingDotsCanvas.height; y += 25) {
+      blinkingDotsCanvas.addCircle(new circle(new point(x, y), 5, 0, 2, constants.Clockwise));
+      blinkingDotsCanvas.addStyle(new style(constants.White, constants.Black, 1));
     }
   }
 }

@@ -6,15 +6,15 @@ import style from "./style.js";
 import constants from "./constants.js"
 
 function kanizsaTriangle() {
-  const ktCanvas = new canvas("kanizsa-triangle");
+  const kanizsaTriangleCanvas = new canvas("kanizsa-triangle");
 
   circles().forEach(c => {
-    ktCanvas.addCircle(c.instance);
-    ktCanvas.addStyle(c.style);
+    kanizsaTriangleCanvas.addCircle(c.instance);
+    kanizsaTriangleCanvas.addStyle(c.style);
   });
   triangles().forEach(t => {
-    ktCanvas.addTriangle(t.instance);
-    ktCanvas.addStyle(t.style);
+    kanizsaTriangleCanvas.addTriangle(t.instance);
+    kanizsaTriangleCanvas.addStyle(t.style);
   });
 }
 

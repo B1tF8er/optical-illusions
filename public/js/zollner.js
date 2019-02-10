@@ -5,47 +5,38 @@ import style from "./style.js";
 import constants from "./constants.js";
 
 function zollner() {
-  const zCanvas = new canvas("zollner");
+  const zollnerCanvas = new canvas("zollner");
 
-  addDiagonalLines(zCanvas);
+  addDiagonalLines(zollnerCanvas);
 }
 
-function addDiagonalLines(zCanvas) {
-  const fromX = 0;
-  const fromY = 50;
-  const toX = 600;
-  const toY = 350;
-
-  let iterationControl = 1;
-
-  for (let y = -300; y < zCanvas.height; y += 50) {
-    zCanvas.addLine(
-      new line(new point(fromX, fromY + y), new point(toX, toY + y))
+function addDiagonalLines(zollnerCanvas) {
+  for (let index = 1, y = -300; y < zollnerCanvas.height;  index++, y += 50) {
+    zollnerCanvas.addLine(
+      new line(new point(0, 50 + y), new point(600, 350 + y))
     );
-    zCanvas.addStyle(new style(constants.Black, constants.Black, 3));
+    zollnerCanvas.addStyle(new style(constants.Black, constants.Black, 3));
 
-    let isModuloOfTwo = iterationControl % 2 === 0;
+    let isModuloOfTwo = index % 2 === 0;
     let x = isModuloOfTwo ? 0 : -150;
 
     isModuloOfTwo
-      ? addVerticalLines(x, y, zCanvas)
-      : addHorizontalLines(x, y, zCanvas);
-
-    iterationControl++;
+      ? addVerticalLines(x, y, zollnerCanvas)
+      : addHorizontalLines(x, y, zollnerCanvas);
   }
 }
 
-function addVerticalLines(x, y, zCanvas) {
-  for (; y < zCanvas.width; y += 10, x += 20) {
-    zCanvas.addLine(
+function addVerticalLines(x, y, zollnerCanvas) {
+  for (; y < zollnerCanvas.width; y += 10, x += 20) {
+    zollnerCanvas.addLine(
       new line(new point(10 + x, 40 + y), new point(10 + x, 70 + y))
     );
   }
 }
 
-function addHorizontalLines(x, y, zCanvas) {
-  for (; y < zCanvas.width; y += 10, x += 20) {
-    zCanvas.addLine(
+function addHorizontalLines(x, y, zollnerCanvas) {
+  for (; y < zollnerCanvas.width; y += 10, x += 20) {
+    zollnerCanvas.addLine(
       new line(new point(40 + x, 10 + y), new point(100 + x, 10 + y))
     );
   }
