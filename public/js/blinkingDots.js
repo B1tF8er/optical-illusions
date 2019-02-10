@@ -1,4 +1,5 @@
 import canvas from "./canvas.js";
+import size from "./size.js";
 
 function blinkingDots() {
   const bdCanvas = new canvas("blinking-dots");
@@ -15,8 +16,7 @@ function addBoxes(bdCanvas) {
           x: x,
           y: y
         },
-        width: 20,
-        height: 20
+        size: new size(20, 20)
       });
     }
   }
