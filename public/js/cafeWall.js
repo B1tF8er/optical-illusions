@@ -26,15 +26,10 @@ function addRectangles(cafeWallCanvas) {
 
   for (let x = 0; x < cafeWallCanvas.width; x += 40) {
     for (let index = 1, y = 0; y < cafeWallCanvas.height; index++, y += 20) {
-      if (index % 2 === 0) {
-        cafeWallCanvas.addFillRectangle(
-          new rectangle(new point(10 + x, y), new size(boxSize, boxSize))
-        );
-      } else {
-        cafeWallCanvas.addFillRectangle(
-          new rectangle(new point(15 + x, y), new size(boxSize, boxSize))
-        );
-      }
+      let newX = index % 2 === 0 ? 10 + x : 15 + x;
+      cafeWallCanvas.addFillRectangle(
+        new rectangle(new point(newX, y), new size(boxSize, boxSize))
+      );
     }
   }
 }
