@@ -12,9 +12,13 @@ canvas {
 }
 
 #cafe-wall {
-  background-color: #82807c00;
+  background-image: linear-gradient( #dcdbd800, #d4d4cd);
 }
 
 #blinking-dots {
   background-color: #bbb3b3;
+}
+
+#muller-lyer {
+  background-image: linear-gradient(to bottom right, cyan, white, yellow);
 }
