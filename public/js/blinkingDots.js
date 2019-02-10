@@ -21,14 +21,11 @@ function addBoxes(bdCanvas) {
 }
 
 function addCircles(bdCanvas) {
-  for (let centerX = 22; centerX <= bdCanvas.width; centerX += 25) {
-    for (let centerY = 22; centerY <= bdCanvas.height; centerY += 25) {
+  for (let x = 22; x <= bdCanvas.width; x += 25) {
+    for (let y = 22; y <= bdCanvas.height; y += 25) {
       bdCanvas.addCircle(
         {
-          position: {
-            centerX: centerX,
-            centerY: centerY
-          },
+          position: new point(x, y),
           radius: 5,
           startAngle: 0,
           endAngle: 2,
