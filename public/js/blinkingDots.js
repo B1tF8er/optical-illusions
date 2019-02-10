@@ -24,12 +24,7 @@ function addBoxes(bdCanvas) {
 function addCircles(bdCanvas) {
   for (let x = 22; x <= bdCanvas.width; x += 25) {
     for (let y = 22; y <= bdCanvas.height; y += 25) {
-      let whiteCircle = new circle(new point(x, y));
-      whiteCircle.radius = 5;
-      whiteCircle.startAngle = 0;
-      whiteCircle.endAngle = 2;
-      whiteCircle.counterClockwise = false;
-      bdCanvas.addCircle(whiteCircle, {
+      bdCanvas.addCircle(new circle(new point(x, y), 5, 0, 2, false), {
         fillStyle: "#fff",
         strokeStyle: "#000",
         lineWidth: 1
