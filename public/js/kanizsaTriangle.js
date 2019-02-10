@@ -1,4 +1,5 @@
 import canvas from "./canvas.js";
+import point from "./point.js";
 
 function kanizsaTriangle() {
   const ktCanvas = new canvas("kanizsa-triangle");
@@ -26,10 +27,7 @@ function addCircles(ktCanvas) {
   circles.forEach(circle => {
     ktCanvas.addCircle(
       {
-        position: {
-          centerX: circle.x,
-          centerY: circle.y
-        },
+        position: new point(circle.x, circle.y),
         radius: 30,
         startAngle: 0,
         endAngle: 2,
@@ -48,18 +46,9 @@ function addTriangles(ktCanvas) {
   const triangles = [
     {
       positions: {
-        startPosition: {
-          x: 150,
-          y: 20
-        },
-        leftPosition: {
-          x: 75,
-          y: 150
-        },
-        rightPosition: {
-          x: 225,
-          y: 150
-        }
+        startPosition: new point(150, 20),
+        leftPosition: new point(75, 150),
+        rightPosition: new point(225, 150)
       },
       style: {
         fillStyle: "#FFF",
@@ -69,18 +58,9 @@ function addTriangles(ktCanvas) {
     },
     {
       positions: {
-        startPosition: {
-          x: 150,
-          y: 180
-        },
-        leftPosition: {
-          x: 75,
-          y: 60
-        },
-        rightPosition: {
-          x: 225,
-          y: 60
-        }
+        startPosition: new point(150, 180),
+        leftPosition: new point(75, 60),
+        rightPosition: new point(225, 60)
       },
       style: {
         fillStyle: "#FFF",
