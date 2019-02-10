@@ -77,10 +77,10 @@ export default class canvas {
     this.context.closePath();
   }
 
-  addLine(from, to) {
+  addLine(line) {
     this.context.beginPath();
-    this.context.moveTo(from.x, from.y);
-    this.context.lineTo(to.x, to.y);
+    this.context.moveTo(line.from.x, line.from.y);
+    this.context.lineTo(line.to.x, line.to.y);
     this.context.stroke();
     this.context.closePath();
   }
