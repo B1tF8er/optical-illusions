@@ -46,7 +46,7 @@ function circles() {
     },
     {
       instance: new circle(
-        new point(150, 190),
+        new point(150, 185),
         radius,
         startAngle,
         endAngle,
