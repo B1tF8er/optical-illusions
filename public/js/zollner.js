@@ -17,12 +17,9 @@ function addDiagonalLines(zollnerCanvas) {
     );
     zollnerCanvas.addStyle(new style(constants.Black, constants.Black, 5));
 
-    let isModuloOfTwo = index % 2 === 0;
-    let x = isModuloOfTwo ? 0 : -150;
-
-    isModuloOfTwo
-      ? addVerticalLines(x, y, zollnerCanvas)
-      : addHorizontalLines(x, y, zollnerCanvas);
+    index % 2 === 0
+      ? addVerticalLines(0, y, zollnerCanvas)
+      : addHorizontalLines(150, y, zollnerCanvas);
   }
 }
 
