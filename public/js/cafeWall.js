@@ -12,12 +12,8 @@ function cafeWall() {
 }
 
 function addLines(cafeWallCanvas) {
-  for (let x = 0; x < cafeWallCanvas.width; x += 50) {
-    for (let y = 0; y < cafeWallCanvas.height; y += 50) {
-      cafeWallCanvas.addLine(
-        new line(new point(0, y), new point(300, y))
-      );
-    }
+  for (let y = 0; y < cafeWallCanvas.height; y += 50) {
+    cafeWallCanvas.addLine(new line(new point(0, y), new point(300, y)));
   }
 }
 
