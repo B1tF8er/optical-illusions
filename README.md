@@ -11,7 +11,7 @@ Optical illusions using HTML5 canvas and JavaScript modules
 - Install [NodeJs](https://nodejs.org/en/) 
 - Open a terminal
 - Move to the _optical-illusions_ directory e.g. `cd example/optical-illusions`
-- Run `node server.js`
+- Run `npm start`
 
 This message must appear on the terminal: 
 > **Server started at http://localhost:80**
@@ -19,3 +19,6 @@ This message must appear on the terminal:
 Go to that URL
 
 Enjoy...
+
+# How to stop
+- Press `Ctrl + C`
