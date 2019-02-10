@@ -26,15 +26,15 @@ export default class canvas {
     this.context.closePath();
   }
 
-  addCircle(dimensions, style) {
+  addCircle(circle, style) {
     this.context.beginPath();
     this.context.arc(
-      dimensions.position.x,
-      dimensions.position.y,
-      dimensions.radius,
-      dimensions.startAngle * Math.PI,
-      dimensions.endAngle * Math.PI,
-      dimensions.counterClockwise
+      circle.point.x,
+      circle.point.y,
+      circle.radius,
+      circle.startAngle,
+      circle.endAngle,
+      circle.counterClockwise
     );
     this.context.stroke();
     this.context.closePath();
@@ -48,11 +48,11 @@ export default class canvas {
     this.context.strokeStyle = style.strokeStyle;
   }
 
-  addTriangle(dimensions, style) {
+  addTriangle(triangle, style) {
     this.context.beginPath();
-    this.context.moveTo(dimensions.startPosition.x, dimensions.startPosition.y);
-    this.context.lineTo(dimensions.leftPosition.x, dimensions.leftPosition.y);
-    this.context.lineTo(dimensions.rightPosition.x, dimensions.rightPosition.y);
+    this.context.moveTo(triangle.startPoint.x, triangle.startPoint.y);
+    this.context.lineTo(triangle.leftPoint.x, triangle.leftPoint.y);
+    this.context.lineTo(triangle.rightPoint.x, triangle.rightPoint.y);
     this.context.closePath();
 
     // the fill color
