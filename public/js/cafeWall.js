@@ -12,23 +12,21 @@ function cafeWall() {
 }
 
 function addLines(cafeWallCanvas) {
-  for (let x = 0; x < cafeWallCanvas.width; x += 40) {
-    for (let y = 0; y < cafeWallCanvas.height; y += 20) {
+  for (let x = 0; x < cafeWallCanvas.width; x += 50) {
+    for (let y = 0; y < cafeWallCanvas.height; y += 50) {
       cafeWallCanvas.addLine(
-        new line(new point(0, 20 + y), new point(300, 20 + y))
+        new line(new point(0, y), new point(300, y))
       );
     }
   }
 }
 
 function addRectangles(cafeWallCanvas) {
-  const boxSize = 20;
-
-  for (let x = 0; x < cafeWallCanvas.width; x += 40) {
-    for (let index = 1, y = 0; y < cafeWallCanvas.height; index++, y += 20) {
+  for (let x = 0; x < cafeWallCanvas.width; x += 60) {
+    for (let index = 1, y = 0; y < cafeWallCanvas.height; index++, y += 50) {
       let newX = index % 2 === 0 ? 10 + x : 15 + x;
       cafeWallCanvas.addFillRectangle(
-        new rectangle(new point(newX, y), new size(boxSize, boxSize))
+        new rectangle(new point(newX, y), new size(30, 50))
       );
     }
   }
