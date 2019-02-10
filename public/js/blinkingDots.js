@@ -10,7 +10,7 @@ function blinkingDots() {
 function addBoxes(bdCanvas) {
   for (let x = 0; x <= bdCanvas.width; x += 25) {
     for (let y = 0; y <= bdCanvas.height; y += 25) {
-      bdCanvas.addRectangle({
+      bdCanvas.addFillRectangle({
         position: {
           x: x,
           y: y
