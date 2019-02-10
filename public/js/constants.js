@@ -7,6 +7,10 @@ export default class constants {
         return "#000"
     }
 
+    static get Transparent() {
+        return "transparent";
+    }
+
     static get Clockwise() {
         return false;
     }
