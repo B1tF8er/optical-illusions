@@ -15,7 +15,7 @@ function addDiagonalLines(zollnerCanvas) {
     zollnerCanvas.addLine(
       new line(new point(0, 50 + y), new point(600, 350 + y))
     );
-    zollnerCanvas.addStyle(new style(constants.Black, constants.Black, 3));
+    zollnerCanvas.addStyle(new style(constants.Black, constants.Black, 5));
 
     let isModuloOfTwo = index % 2 === 0;
     let x = isModuloOfTwo ? 0 : -150;
@@ -31,6 +31,7 @@ function addVerticalLines(x, y, zollnerCanvas) {
     zollnerCanvas.addLine(
       new line(new point(10 + x, 40 + y), new point(10 + x, 70 + y))
     );
+    zollnerCanvas.addStyle(new style(constants.Black, constants.Black, 3));
   }
 }
 
@@ -39,6 +40,7 @@ function addHorizontalLines(x, y, zollnerCanvas) {
     zollnerCanvas.addLine(
       new line(new point(40 + x, 10 + y), new point(100 + x, 10 + y))
     );
+    zollnerCanvas.addStyle(new style(constants.Black, constants.Black, 3));
   }
 }
 
