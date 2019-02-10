@@ -14,7 +14,7 @@ export default class canvas {
     }
   }
 
-  addRectangle(dimensions) {
+  addFillRectangle(dimensions) {
     this.context.beginPath();
     this.context.fillRect(
       dimensions.position.x,
@@ -63,5 +63,25 @@ export default class canvas {
     this.context.lineWidth = style.lineWidth;
     this.context.strokeStyle = style.strokeStyle;
     this.context.stroke();
+  }
+
+  addRectangle(dimensions) {
+    this.context.beginPath();
+    this.context.rect(
+      dimensions.position.x,
+      dimensions.position.y,
+      dimensions.width,
+      dimensions.height
+    );
+    this.context.stroke();
+    this.context.closePath();
+  }
+
+  addLine(from, to) {
+    this.context.beginPath();
+    this.context.moveTo(from.x, from.y);
+    this.context.lineTo(to.x, to.y);
+    this.context.stroke();
+    this.context.closePath();
   }
 }
