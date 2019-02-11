@@ -11,7 +11,7 @@ function zollner() {
 }
 
 function addDiagonalLines(zollnerCanvas) {
-  for (let index = 1, y = -300; y < zollnerCanvas.height;  index++, y += 50) {
+  for (let index = 1, y = -300; y < zollnerCanvas.height; index++, y += 50) {
     zollnerCanvas.addLine(
       new line(new point(0, 50 + y), new point(600, 350 + y))
     );
@@ -19,7 +19,7 @@ function addDiagonalLines(zollnerCanvas) {
 
     index % 2 === 0
       ? addVerticalLines(0, y, zollnerCanvas)
-      : addHorizontalLines(150, y, zollnerCanvas);
+      : addHorizontalLines(-150, y, zollnerCanvas);
   }
 }
 
