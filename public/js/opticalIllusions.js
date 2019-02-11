@@ -3,6 +3,7 @@ import cafeWall from "./cafeWall.js";
 import blinkingDots from "./blinkingDots.js";
 import kanizsaTriangle from "./kanizsaTriangle.js";
 import mullerLyer from "./mullerLyer.js";
+import boxAndSphere from "./boxAndSphere.js";
 
 class opticalIllusions {
   static display() {
@@ -11,6 +12,7 @@ class opticalIllusions {
     blinkingDots();
     kanizsaTriangle();
     mullerLyer();
+    boxAndSphere();
   }
 }
 

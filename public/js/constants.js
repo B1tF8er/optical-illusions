@@ -11,6 +11,14 @@ export default class constants {
         return "transparent";
     }
 
+    static get Purple() {
+        return "#6d2d6d";
+    }
+
+    static get Red() {
+        return "#f00";
+    }
+
     static get Clockwise() {
         return false;
     }
