@@ -6,6 +6,7 @@ Using HTML5 canvas and JavaScript modules
 3. Blinking Dots
 4. Kanizsa Triangle
 5. Muller-Lyer
+6. Box and Sphere
 
 # How to run 
 - Install [NodeJs](https://nodejs.org/en/) 
