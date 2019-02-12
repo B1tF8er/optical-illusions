@@ -1,10 +1,4 @@
-import canvas from "./canvas.js";
-import point from "./point.js";
-import size from "./size.js";
-import line from "./line.js";
-import rectangle from "./rectangle.js";
-import style from "./style.js";
-import constants from "./constants.js";
+import { canvas, point, size, line, rectangle, style, constants } from "../canvas/index.js";
 
 function mullerLyer() {
   const mullerLyerCanvas = new canvas("muller-lyer");
@@ -14,8 +8,12 @@ function mullerLyer() {
 }
 
 function addLeftRectangle(mullerLyerCanvas) {
-  mullerLyerCanvas.addRectangle(new rectangle(new point(50, 40), new size(80, 150)));
-  mullerLyerCanvas.addStyle(new style(constants.Transparent, constants.Black, 3));  
+  mullerLyerCanvas.addRectangle(
+    new rectangle(new point(50, 40), new size(80, 150))
+  );
+  mullerLyerCanvas.addStyle(
+    new style(constants.Transparent, constants.Black, 3)
+  );
 
   mullerLyerCanvas.addLine(new line(new point(50, 60), new point(90, 50)));
   mullerLyerCanvas.addLine(new line(new point(90, 50), new point(130, 60)));
@@ -26,8 +24,12 @@ function addLeftRectangle(mullerLyerCanvas) {
 }
 
 function addRightRectangle(mullerLyerCanvas) {
-  mullerLyerCanvas.addRectangle(new rectangle(new point(150, 40), new size(80, 150)));
-  mullerLyerCanvas.addStyle(new style(constants.Transparent, constants.Black, 3));
+  mullerLyerCanvas.addRectangle(
+    new rectangle(new point(150, 40), new size(80, 150))
+  );
+  mullerLyerCanvas.addStyle(
+    new style(constants.Transparent, constants.Black, 3)
+  );
 
   mullerLyerCanvas.addLine(new line(new point(150, 40), new point(190, 50)));
   mullerLyerCanvas.addLine(new line(new point(190, 50), new point(230, 40)));

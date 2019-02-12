@@ -1,8 +1,4 @@
-import canvas from "./canvas.js";
-import point from "./point.js";
-import line from "./line.js";
-import style from "./style.js";
-import constants from "./constants.js";
+import { canvas, point, line, style, constants } from "../canvas/index.js";
 
 function zollner() {
   const zollnerCanvas = new canvas("zollner");

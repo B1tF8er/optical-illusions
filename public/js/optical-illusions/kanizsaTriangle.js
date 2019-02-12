@@ -1,9 +1,4 @@
-import canvas from "./canvas.js";
-import point from "./point.js";
-import circle from "./circle.js";
-import triangle from "./triangle.js";
-import style from "./style.js";
-import constants from "./constants.js";
+import { canvas, point, circle, triangle, style, constants } from "../canvas/index.js";
 
 function kanizsaTriangle() {
   const kanizsaTriangleCanvas = new canvas("kanizsa-triangle");

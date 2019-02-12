@@ -1,10 +1,4 @@
-import canvas from "./canvas.js";
-import point from "./point.js";
-import size from "./size.js";
-import circle from "./circle.js";
-import rectangle from "./rectangle.js";
-import style from "./style.js";
-import constants from "./constants.js";
+import { canvas, point, size, circle, rectangle, style, constants } from "../canvas/index.js";
 
 function blinkingDots() {
   const blinkingDotsCanvas = new canvas("blinking-dots");

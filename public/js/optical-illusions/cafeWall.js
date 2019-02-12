@@ -1,8 +1,4 @@
-import canvas from "./canvas.js";
-import point from "./point.js";
-import line from "./line.js";
-import rectangle from "./rectangle.js";
-import size from "./size.js";
+import { canvas, point, line, rectangle, size } from "../canvas/index.js";
 
 function cafeWall() {
   const cafeWallCanvas = new canvas("cafe-wall");
