@@ -1,5 +1,5 @@
 ## Optical Illusions
-Optical illusions using HTML5 canvas and JavaScript modules
+Using HTML5 canvas and JavaScript modules
 
 1. Zollner
 2. Cafe Wall
