@@ -8,12 +8,8 @@ function mullerLyer() {
 }
 
 function addLeftRectangle(mullerLyerCanvas) {
-  mullerLyerCanvas.addRectangle(
-    new rectangle(new point(50, 40), new size(80, 150))
-  );
-  mullerLyerCanvas.addStyle(
-    new style(constants.Transparent, constants.Black, 3)
-  );
+  mullerLyerCanvas.addRectangle(new rectangle(new point(50, 40), new size(80, 150)));
+  mullerLyerCanvas.addStyle(new style(constants.Transparent, constants.Black, 3));
 
   mullerLyerCanvas.addLine(new line(new point(50, 60), new point(90, 50)));
   mullerLyerCanvas.addLine(new line(new point(90, 50), new point(130, 60)));
@@ -24,12 +20,8 @@ function addLeftRectangle(mullerLyerCanvas) {
 }
 
 function addRightRectangle(mullerLyerCanvas) {
-  mullerLyerCanvas.addRectangle(
-    new rectangle(new point(150, 40), new size(80, 150))
-  );
-  mullerLyerCanvas.addStyle(
-    new style(constants.Transparent, constants.Black, 3)
-  );
+  mullerLyerCanvas.addRectangle(new rectangle(new point(150, 40), new size(80, 150)));
+  mullerLyerCanvas.addStyle( new style(constants.Transparent, constants.Black, 3));
 
   mullerLyerCanvas.addLine(new line(new point(150, 40), new point(190, 50)));
   mullerLyerCanvas.addLine(new line(new point(190, 50), new point(230, 40)));

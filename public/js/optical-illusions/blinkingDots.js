@@ -12,9 +12,7 @@ function addBoxes(blinkingDotsCanvas) {
 
   for (let x = 0; x <= blinkingDotsCanvas.width; x += 25) {
     for (let y = 0; y <= blinkingDotsCanvas.height; y += 25) {
-      blinkingDotsCanvas.addFillRectangle(
-        new rectangle(new point(x, y), new size(boxSize, boxSize))
-      );
+      blinkingDotsCanvas.addFillRectangle(new rectangle(new point(x, y), new size(boxSize, boxSize)));
     }
   }
 }
@@ -26,18 +24,8 @@ function addCircles(blinkingDotsCanvas) {
 
   for (let x = 22; x <= blinkingDotsCanvas.width; x += 25) {
     for (let y = 22; y <= blinkingDotsCanvas.height; y += 25) {
-      blinkingDotsCanvas.addCircle(
-        new circle(
-          new point(x, y),
-          radius,
-          startAngle,
-          endAngle,
-          constants.Clockwise
-        )
-      );
-      blinkingDotsCanvas.addStyle(
-        new style(constants.White, constants.Black, 1)
-      );
+      blinkingDotsCanvas.addCircle(new circle(new point(x, y), radius, startAngle, endAngle, constants.Clockwise));
+      blinkingDotsCanvas.addStyle(new style(constants.White, constants.Black, 1));
     }
   }
 }

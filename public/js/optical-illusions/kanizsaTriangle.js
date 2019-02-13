@@ -20,33 +20,15 @@ function circles() {
 
   return [
     {
-      instance: new circle(
-        new point(80, 60),
-        radius,
-        startAngle,
-        endAngle,
-        constants.Clockwise
-      ),
+      instance: new circle(new point(80, 60), radius, startAngle, endAngle, constants.Clockwise),
       style: new style(constants.Black, constants.Black, 1)
     },
     {
-      instance: new circle(
-        new point(220, 60),
-        radius,
-        startAngle,
-        endAngle,
-        constants.Clockwise
-      ),
+      instance: new circle(new point(220, 60), radius, startAngle, endAngle,constants.Clockwise),
       style: new style(constants.Black, constants.Black, 1)
     },
     {
-      instance: new circle(
-        new point(150, 185),
-        radius,
-        startAngle,
-        endAngle,
-        constants.Clockwise
-      ),
+      instance: new circle(new point(150, 185), radius, startAngle, endAngle, constants.Clockwise),
       style: new style(constants.Black, constants.Black, 1)
     }
   ];
@@ -55,19 +37,11 @@ function circles() {
 function triangles() {
   return [
     {
-      instance: new triangle(
-        new point(150, 20),
-        new point(75, 150),
-        new point(225, 150)
-      ),
+      instance: new triangle(new point(150, 20), new point(75, 150), new point(225, 150)),
       style: new style(constants.White, constants.Black, 3)
     },
     {
-      instance: new triangle(
-        new point(150, 180),
-        new point(75, 60),
-        new point(225, 60)
-      ),
+      instance: new triangle(new point(150, 180), new point(75, 60), new point(225, 60)),
       style: new style(constants.White, constants.White, 3)
     }
   ];

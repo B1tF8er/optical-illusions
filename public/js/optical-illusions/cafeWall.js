@@ -17,9 +17,7 @@ function addRectangles(cafeWallCanvas) {
   for (let x = 0; x < cafeWallCanvas.width; x += 60) {
     for (let index = 1, y = 0; y < cafeWallCanvas.height; index++, y += 50) {
       let newX = index % 2 === 0 ? 10 + x : 20 + x;
-      cafeWallCanvas.addFillRectangle(
-        new rectangle(new point(newX, y), new size(30, 50))
-      );
+      cafeWallCanvas.addFillRectangle(new rectangle(new point(newX, y), new size(30, 50)));
     }
   }
 }
