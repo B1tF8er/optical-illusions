@@ -8,22 +8,26 @@ function blinkingDots() {
 }
 
 function addBoxes(blinkingDotsCanvas) {
+  const initialPoint = 0;
+  const step = 25;
   const boxSize = 20;
 
-  for (let x = 0; x <= blinkingDotsCanvas.width; x += 25) {
-    for (let y = 0; y <= blinkingDotsCanvas.height; y += 25) {
+  for (let x = initialPoint; x <= blinkingDotsCanvas.width; x += step) {
+    for (let y = initialPoint; y <= blinkingDotsCanvas.height; y += step) {
       blinkingDotsCanvas.addFillRectangle(new rectangle(new point(x, y), new size(boxSize, boxSize)));
     }
   }
 }
 
 function addCircles(blinkingDotsCanvas) {
+  const initialPoint = 22;
+  const step = 25;
   const radius = 5;
   const startAngle = 0;
   const endAngle = 2;
 
-  for (let x = 22; x <= blinkingDotsCanvas.width; x += 25) {
-    for (let y = 22; y <= blinkingDotsCanvas.height; y += 25) {
+  for (let x = initialPoint; x <= blinkingDotsCanvas.width; x += step) {
+    for (let y = initialPoint; y <= blinkingDotsCanvas.height; y += step) {
       blinkingDotsCanvas.addCircle(new circle(new point(x, y), radius, startAngle, endAngle, constants.Clockwise));
       blinkingDotsCanvas.addStyle(new style(constants.White, constants.Black, 1));
     }
