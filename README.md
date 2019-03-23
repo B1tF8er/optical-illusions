@@ -7,6 +7,7 @@ Using HTML5 canvas and JavaScript modules
 4. Kanizsa Triangle
 5. Muller-Lyer
 6. Box and Sphere
+6. Ponzo
 
 # How to run 
 - Install [NodeJs](https://nodejs.org/en/) 

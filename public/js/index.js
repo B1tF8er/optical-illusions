@@ -4,7 +4,8 @@ import {
   blinkingDots,
   kanizsaTriangle,
   mullerLyer,
-  boxAndSphere
+  boxAndSphere,
+  ponzo
 } from "./optical-illusions/index.js";
 
 class opticalIllusions {
@@ -15,6 +16,7 @@ class opticalIllusions {
     kanizsaTriangle();
     mullerLyer();
     boxAndSphere();
+    ponzo();
   }
 }
 

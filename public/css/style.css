@@ -22,3 +22,7 @@ canvas {
 #muller-lyer {
   background-image: linear-gradient(to bottom right, cyan, white, yellow);
 }
+
+#ponzo {
+  background-color: #9ca0b9;
+}

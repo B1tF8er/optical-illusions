@@ -4,6 +4,7 @@ import blinkingDots from "./blinkingDots.js";
 import kanizsaTriangle from "./kanizsaTriangle.js";
 import mullerLyer from "./mullerLyer.js";
 import boxAndSphere from "./boxAndSphere.js";
+import ponzo from "./ponzo.js";
 
 export {
   zollner,
@@ -11,5 +12,6 @@ export {
   blinkingDots,
   kanizsaTriangle,
   mullerLyer,
-  boxAndSphere
+  boxAndSphere,
+  ponzo
 };

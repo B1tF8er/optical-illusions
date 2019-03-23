@@ -19,6 +19,10 @@ export default class constants {
         return "#f00";
     }
 
+    static get Yellow() {
+        return "#ffff00"
+    }
+
     static get Clockwise() {
         return false;
     }
