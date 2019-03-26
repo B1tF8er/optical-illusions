@@ -2,6 +2,7 @@ import { canvas, point, line, style, constants } from "../canvas/index.js";
 
 function ponzo() {
   const ponzoCanvas = new canvas("ponzo");
+  
   drawHorizontalLines(ponzoCanvas);
   drawVerticalLines(ponzoCanvas);
   drawPonzoLines(ponzoCanvas);
@@ -41,6 +42,7 @@ function drawPonzoLines(ponzoCanvas) {
   ponzoCanvas.addLine(new line(new point(80, 75), new point(220, 75)));
   ponzoCanvas.addStyle(new style(constants.Yellow, constants.Yellow, 9));
   ponzoCanvas.addLine(new line(new point(80, 230), new point(220, 230)));
+  ponzoCanvas.addStyle(new style(constants.Yellow, constants.Yellow, 9));
 }
 
 export default ponzo;
