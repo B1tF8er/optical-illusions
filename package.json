@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/B1tF8er/optical-illusions.git"
   },
-  "keywords": ["optical", "illusion", "canvas"],
+  "keywords": [
+    "optical",
+    "illusion",
+    "canvas"
+  ],
   "author": "Jorge Yañez",
   "license": "WTFPL",
   "bugs": {
