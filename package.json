@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/B1tF8er/optical-illusions#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.18.2"
   }
 }
